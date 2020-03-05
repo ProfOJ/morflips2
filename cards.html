@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Prof OJ">
+  <title>Morflips - Home</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/logo.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="assets/css/argon.mine209.css?v=1.0.0" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="assets/css/main.css" rel=stylesheet type="text/css">
+  <script src="assets/js/script.js" type="text/javascript"></script>
+  
+</head>
+
+<body class="bg-default">
+ 
+  <!-- Navbar -->
+ 
+  <!-- Main content -->
+  <div class="main-content">
+    <div class="container mt-3 pb-0">
+	<div class="text-center">
+	<div class="header" style="color:#49aa43;">All Morphemes</div>
+	<br />
+	</div>
+      <div class="row justify-content-center">
+        <div class="col-lg-12 col-md-12">
+          <div class="card bg-secondary border-0 mb-0" style="height:80vh;">
+			<div class="card-body background px-lg-5 py-lg-5">
+              <div class="text-center">
+                <div class="app col-lg-12 col-md-12">
+					<!-- <div class="modal">
+						<div id="close">X</div>
+						<div class="modal-wrap">
+						<div>Question</div>
+						<input type="text" id="newQuestion">
+						<div>Answer </div>
+						<input type="text" id="newAnswer">
+						<div><button id="submit">Add new Card</button></div>
+						</div>
+					</div> -->
+<style>
+/* Tutorial on https://fossheim.io/writing/posts/css-text-gradient. */
+
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: #CA4246;
+  
+  /* Create the gradient. */
+   background-image: linear-gradient(
+        45deg,
+        #CA4246 16.666%, 
+        #E16541 16.666%, 
+        #E16541 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 50%, 
+        #8B9862 50%, 
+        #8B9862 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #A7489B 83.333%);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.gradient-text:hover{
+    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+  
+
+
+
+</style>
+
+<div class="modal info_modal" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="height:97vh;">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <div id="closeinfo"><span><i class="fa fa-times-circle"></i></span></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-wrap">
+			<div>
+				 <p class="gradient-text" style="font-size:3em;">Morflips</p>
+				
+				<div>
+				 Your last card was : <span id="lastcard">_</span>
+				
+				</div>
+				
+				
+				 <div style="position:fixed;bottom:5px;text-align:center;">	
+				 <p class="" style="font-size:2em;">&nbsp;&nbsp;<a href="https://profoj.github.io/" target="_blank">ProfOJ </a><span style="color:red;"><i class="fa fa-heart"></i></span> Gloria</p>
+				 <!-- <img src="assets/img/profoj.png" style="width:20px;height:20px;" /> -->
+				 </div>		
+					
+						
+			</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+	
+<div class="modal add_modal mt-5" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add morpheme</h5>
+        <div id="closeadd"><span><i class="fa fa-times-circle"></i></span></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-wrap">
+						<div>Morpheme</div>
+						<input type="text" id="newQuestion">
+						<div>Meaning </div>
+						<input type="text" id="newAnswer">
+						<div><button id="submit" class="btn btn-default my-4 btn-lg" style="width:90%;background:#582ee6 !important;border-color:#582ee6;">Add new Card</button>
+						
+						</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Search modal -->
+<div class="modal search_modal mt-5" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" style="">Search Morphemes</h5>
+        <div id="closesearch"><span><i class="fa fa-times-circle"></i></span></div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-wrap">
+						
+						
+						<input list="morphemes" type="text" class="" id="search_word" placeholder="Select or type morpheme">
+						<datalist id="morphemes">
+							
+								 
+						</datalist>
+						
+						<div class="pt-3">
+						Card No.<br />
+						<span id="card_no" style="color: brown;font-size: x-large;">___</span><br />
+						Morpheme <br />
+						
+						<span id="morpheme_searched" style="color: brown;font-size: x-large;">___</span>
+						
+						<br />
+						Meaning <br />
+						<span id="meaning" style="color: #49aa43;font-size: x-large;">___</span>
+						
+						</div>
+						
+						<div class="view_card">
+						<span><i class="fa fa-step-forward"></i></span><br />
+						View card
+						
+						</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+					
+					<div class="container col-lg-12 col-md-12 pt-5">
+						<div id="search">
+						<!-- <input list="morphemes" type="text" class="" name="location">
+						<datalist id="morphemes">
+
+								 
+						</datalist> -->
+						<div id="searchbtn" class="btn btn-default my-4 btn-sm" style="background: #582ee600 !important;color:#49aa43;border-color: #49aa43;border-radius:100%;top: -30px;right: 30px;"><span><i class="fa fa-search"></i></span></div>
+						</div>
+						
+						<div id="card">
+							<figure id="front">
+							</figure>
+							<figure id="back">
+							</figure>
+							<span id="front_no" style="position:relative;color:#ffff;left: -125px;"></span>
+						</div>
+					</div>
+					<div id="progress"></div>
+					
+					<div class="btn-container">
+						<div id="prevbtn" class="btn btn-default my-4 btn-lg" style="width:90%;background: #582ee600 !important;color:#49aa43;border-color: #49aa43;">Previous</div>
+						
+						<div id="addbtn" class="btn btn-default my-4 btn-lg" style="width:27%;background: #582ee600 !important;color:#49aa43;border-color: #49aa43;border-radius:100%;"><span><i class="fa fa-plus"></i></span></div>
+						
+						<div class="btn btn-default my-4 btn-lg" style="width:90%;background: #582ee600 !important;color:#49aa43;border-color: #49aa43;" id="nextbtn">Next</div>
+					</div>
+				</div>  
+			  </div>    
+            </div>
+          </div>
+		  <div class="text-center pt-2" id="showinfo">
+			<span><i class="fa fa-info-circle"></i></span><br />
+			More Info
+		  </div>	
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  	
+</body>
+</html>
